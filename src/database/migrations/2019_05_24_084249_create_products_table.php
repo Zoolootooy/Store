@@ -19,15 +19,15 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id')->unsigned();
             $table->tinyInteger('category_id')->unsigned();
             $table->tinyInteger('brand_id')->unsigned();
-            $table->string('title',255);
-            $table->string('alias',255)->unique();
+            $table->string('title',191);
+            $table->string('alias',191)->unique();
             $table->text('content')->nullable();
             $table->float('price')->default(0);
             $table->float('old_price')->default(0)->nullable();
             $table->enum('status',['0','1'])->default(1);
-            $table->string('keywords',255)->default(NULL)->nullable();
-            $table->string('description',255)->default(NULL)->nullable();
-            $table->string('img',255)->nullable();
+            $table->string('keywords',191)->default(NULL)->nullable();
+            $table->string('description',191)->default(NULL)->nullable();
+            $table->string('img',191)->nullable();
             $table->enum('hit',['0','1'])->default(0)->index();
 
             $table->timestamps();

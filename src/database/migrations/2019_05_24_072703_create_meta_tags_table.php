@@ -27,7 +27,7 @@ class CreateMetaTagsTable extends Migration
             $table->string('title')->nullable();
             $table->string('keywords')->nullable();
             $table->text('description')->nullable();
-            
+
             // SEO-fields
             $table->string('h1')->nullable();
             $table->text('seo_text')->nullable();

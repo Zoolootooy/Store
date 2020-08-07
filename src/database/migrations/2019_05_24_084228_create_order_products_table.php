@@ -20,7 +20,7 @@ class CreateOrderProductsTable extends Migration
             $table->bigInteger('order_id')->unsigned();
             $table->bigInteger('product_id')->unsigned();
             $table->bigInteger('qty');
-            $table->string('title',255);
+            $table->string('title',191);
             $table->float('price');
 
             $table->index('order_id');
